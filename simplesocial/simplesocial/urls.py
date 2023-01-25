@@ -19,6 +19,10 @@ from django.urls import include, re_path,path
 from django.contrib import admin
 from . import views
 
+admin.site.site_header = "SimpleSocial Admin"
+admin.site.site_title = "SimpleSocial Admin Portal"
+admin.site.index_title = "Welcome to SimpleSocial"
+
 urlpatterns = [
     re_path(r"^$", views.HomePage.as_view(), name="home"),
     re_path(r"^test/$", views.TestPage.as_view(), name="test"),
